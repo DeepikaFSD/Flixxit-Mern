@@ -85,7 +85,7 @@ export const getLikedMovies = createAsyncThunk(
   async (email) => {
     const {
       data: { movies },
-    } = await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+    } = await axios.get(`https://flixxit-server-e700.onrender.com/api/user/liked/${email}`);
     return movies;
   }
 );
@@ -96,7 +96,7 @@ export const deleteLikedMovies = createAsyncThunk(
   async ({ email, movieId }) => {
     const {
       data: { movies },
-    } = await axios.put('http://localhost:5000/api/user/remove', {
+    } = await axios.put('https://flixxit-server-e700.onrender.com/api/user/remove', {
       email,
       movieId,
     });

@@ -104,7 +104,7 @@ const Card = ({ movieData, isLiked = false }) => {
   //add movie to mylist
   const addToList = async () => {
     try {
-      await axios.post('http://localhost:5000/api/user/add', {
+      await axios.post('https://flixxit-server-e700.onrender.com/api/user/add', {
         email,
         data: movieData,
       });
